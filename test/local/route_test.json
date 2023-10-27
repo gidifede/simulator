@@ -1,0 +1,146 @@
+[
+  {
+    "source_node_id": "Milano_Hub",
+    "destination_node_id": "Bari_Hub",
+    "distance": 771.4,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Bari_Hub",
+    "destination_node_id": "Milano_Hub",
+    "distance": 771.4,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Milano_Hub",
+    "destination_node_id": "Palermo_Hub",
+    "distance": 571.86,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Palermo_Hub",
+    "destination_node_id": "Milano_Hub",
+    "distance": 571.86,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Milano_Hub",
+    "destination_node_id": "Torino_Branch1",
+    "distance": 100.0,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Torino_Branch1",
+    "destination_node_id": "Milano_Hub",
+    "distance": 100.0,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Bari_Hub",
+    "destination_node_id": "Foggia_Branch1",
+    "distance": 100.0,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Foggia_Branch1",
+    "destination_node_id": "Bari_Hub",
+    "distance": 100.0,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Palermo_Hub",
+    "destination_node_id": "Siracusa_Branch1",
+    "distance": 100.0,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Siracusa_Branch1",
+    "destination_node_id": "Palermo_Hub",
+    "distance": 100.0,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Palermo_Hub",
+    "destination_node_id": "Bari_Hub",
+    "distance": 609.5,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "Bari_Hub",
+    "destination_node_id": "Palermo_Hub",
+    "distance": 609.5,
+    "cutoff_time": [
+      "09:00",
+      "11:00",
+      "13:00",
+      "17:00"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  }
+]

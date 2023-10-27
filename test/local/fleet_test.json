@@ -1,0 +1,362 @@
+[
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Bari_1",
+        "routes": [
+          "Mil-Bar",
+          "Bar-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Bari_2",
+        "routes": [
+          "Mil-Bar",
+          "Bar-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Bari_3",
+        "routes": [
+          "Mil-Bar",
+          "Bar-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Palermo_1",
+        "routes": [
+          "Mil-Pal",
+          "Pal-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Palermo_2",
+        "routes": [
+          "Mil-Pal",
+          "Pal-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Palermo_3",
+        "routes": [
+          "Mil-Pal",
+          "Pal-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Torino_1",
+        "routes": [
+          "Mil-Tor",
+          "Tor-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Torino_2",
+        "routes": [
+          "Mil-Tor",
+          "Tor-Mil"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Milano_Torino_3",
+        "routes": [
+          "Mil-Tor",
+          "Tor-Mil"
+        ]
+      }
+    ],
+    "facility_id": "Milano_Hub",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  },
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Milano_1",
+        "routes": [
+          "Bar-Mil",
+          "Mil-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Milano_2",
+        "routes": [
+          "Bar-Mil",
+          "Mil-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Milano_3",
+        "routes": [
+          "Bar-Mil",
+          "Mil-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Palermo_1",
+        "routes": [
+          "Bar-Pal",
+          "Pal-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Palermo_2",
+        "routes": [
+          "Bar-Pal",
+          "Pal-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Palermo_3",
+        "routes": [
+          "Bar-Pal",
+          "Pal-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Foggia_1",
+        "routes": [
+          "Bar-Fog",
+          "Fog-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Foggia_2",
+        "routes": [
+          "Bar-Fog",
+          "Fog-Bar"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Bari_Foggia_3",
+        "routes": [
+          "Bar-Fog",
+          "Fog-Bar"
+        ]
+      }
+    ],
+    "facility_id": "Bari_Hub",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  },
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Milano_1",
+        "routes": [
+          "Pal-Mil",
+          "Mil-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Milano_2",
+        "routes": [
+          "Pal-Mil",
+          "Mil-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Milano_3",
+        "routes": [
+          "Pal-Mil",
+          "Mil-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Bari_1",
+        "routes": [
+          "Pal-Bar",
+          "Bar-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Bari_2",
+        "routes": [
+          "Pal-Bar",
+          "Bar-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Bari_3",
+        "routes": [
+          "Pal-Bar",
+          "Bar-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Siracusa_1",
+        "routes": [
+          "Pal-Sir",
+          "Sir-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Siracusa_2",
+        "routes": [
+          "Pal-Sir",
+          "Sir-Pal"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Palermo_Siracusa_3",
+        "routes": [
+          "Pal-Sir",
+          "Sir-Pal"
+        ]
+      }
+    ],
+    "facility_id": "Palermo_Hub",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  },
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Torino_Milano_1",
+        "routes": [
+          "Tor-Mil",
+          "Mil-Tor"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Torino_Milano_2",
+        "routes": [
+          "Tor-Mil",
+          "Mil-Tor"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Torino_Milano_3",
+        "routes": [
+          "Tor-Mil",
+          "Mil-Tor"
+        ]
+      }
+    ],
+    "facility_id": "Torino_Branch1",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  },
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Siracusa_Palermo_1",
+        "routes": [
+          "Sir-Pal",
+          "Pal-Sir"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Siracusa_Palermo_2",
+        "routes": [
+          "Sir-Pal",
+          "Pal-Sir"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Siracusa_Palermo_3",
+        "routes": [
+          "Sir-Pal",
+          "Pal-Sir"
+        ]
+      }
+    ],
+    "facility_id": "Siracusa_Branch1",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  },
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Foggia_Bari_1",
+        "routes": [
+          "Fog-Bar",
+          "Bar-Fog"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Foggia_Bari_2",
+        "routes": [
+          "Fog-Bar",
+          "Bar-Fog"
+        ]
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "Foggia_Bari_3",
+        "routes": [
+          "Fog-Bar",
+          "Bar-Fog"
+        ]
+      }
+    ],
+    "facility_id": "Foggia_Branch1",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  }
+]

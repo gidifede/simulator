@@ -1,0 +1,18 @@
+[
+  {
+    "vehicles": [
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "ZA321RD"
+      },
+      {
+        "type": "SCANIA",
+        "capacity": 3000,
+        "license_plate": "TR321YG"
+      }
+    ],
+    "facility_id": "MI1",
+    "timestamp": "2023-09-18T11:51:12.376Z"
+  }
+]

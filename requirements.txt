@@ -1,0 +1,11 @@
+networkx
+Flask
+flask-cors
+requests
+cloudevents
+python-dotenv
+celery
+celery[redis]
+supervisor
+flower==2.0.1
+pytest

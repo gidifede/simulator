@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Network Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+
+        #map {
+            flex: 1;
+            z-index: 1;
+            width: 80vw;
+            /* height: 100vh; */
+        }
+
+        #stats {
+            flex: 1;
+            z-index: 1;
+            /* width: 50vw; */
+            display: inline-block;
+            height: 80vh;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .block {
+            width: 80vwx;
+        }
+
+        #clockBox {
+            background-color: white;
+            padding: 10px;
+            z-index: 2;
+            align-self: flex-end;
+            margin: 10px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #646870;
+            color: #fff;
+        }
+
+        #velocityStuff {
+            background-color: white;
+            padding: 10px;
+            z-index: 2;
+            align-self: flex-end;
+            margin: 10px;
+        }
+
+
+        .tabs {
+            position: relative;
+            min-height: 200px;
+            /* This part sucks */
+            clear: both;
+            margin: 25px 0;
+        }
+
+        .tab {
+            float: left;
+        }
+
+        .tab label {
+            background: #eee;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-left: -1px;
+            position: relative;
+            left: 1px;
+        }
+
+        .tab [type=radio] {
+            display: none;
+        }
+
+        .content {
+            position: absolute;
+            top: 28px;
+            left: 50px;
+            background: white;
+            right: 50px;
+            /* bottom: 0; */
+            padding: 20px;
+            border: 0px solid #ccc;
+        }
+
+        [type=radio]:checked~label {
+            background: white;
+            border-bottom: 1px solid white;
+            z-index: 2;
+        }
+
+        [type=radio]:checked~label~.content {
+            z-index: 1;
+        }
+
+        iframe {
+            display: block;
+            /* iframes are inline by default */
+            background: #000;
+            border: none;
+            /* Reset default border */
+            height: 100vh;
+            /* Viewport-relative units */
+            width: 80vw;
+        }
+
+        #disableButton {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tabs">
+
+        <div class="tab">
+            <input type="radio" id="tab-1" name="tab-group-1" checked>
+            <label for="tab-1">Dashboard</label>
+
+            <div class="content">
+                <div class="row">
+                    <div id="stats" class="block"></div>
+                    <div id="vehicle" class="block"></div>
+                    <div id="map" class="block"></div>
+
+                </div>
+                <div id="resetButtonBox">
+                    <button id="resetButton">Reset</button>
+                </div>
+                <div id="clockBox">
+                    <div id="clock"></div>
+                </div>
+                <div>
+                    <button id="manualButton">Manual</button>
+                    <button id="autoButton">Auto</button>
+                </div>
+                <div id="velocityStuff">
+                    <div id="autoBox">
+                        Auto: <button id="pauseButton">Pause</button>
+                    </div>
+                    <div id="manualBox">
+                        Manual: <button id="stepButton" disabled>Go ahead one step</button>
+                    </div>
+                    <div id="velocityBox">
+                        Velocity:
+                        <input type="text" id="velocityInput" placeholder="">
+                        <button id="updateVelocityButton">Update velocity</button>
+                    </div>
+                </div>
+                <div id="cmdsPerformance">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" id="tab-2" name="tab-group-1">
+            <label for="tab-2">Monitor</label>
+
+            <div class="content">
+                <iframe id="MonitorFrame"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        // Auto Button
+        function set_auto_mode() {
+            const apiUrl = "/set_auto_mode";
+            const autoButton = document.getElementById("autoButton");
+            fetch(apiUrl)
+                .then(response => {
+                    response.text()
+                    document.getElementById('autoBox').style.pointerEvents = 'auto';
+                    document.getElementById('pauseButton').disabled = false;
+                    document.getElementById('manualBox').style.pointerEvents = 'none';
+                    document.getElementById('stepButton').disabled = true;
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const autoButton = document.getElementById("autoButton");
+            autoButton.addEventListener("click", function () {
+                set_auto_mode();
+            });
+        });
+
+        // Manual Button
+        function set_manual_mode() {
+            const apiUrl = "/set_manual_mode";
+            const manualButton = document.getElementById("manualButton");
+            fetch(apiUrl)
+                .then(response => {
+                    response.text()
+                    document.getElementById('autoBox').style.pointerEvents = 'none';
+                    document.getElementById('pauseButton').disabled = true;
+                    document.getElementById('manualBox').style.pointerEvents = 'auto';
+                    document.getElementById('stepButton').disabled = false;
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const manualButton = document.getElementById("manualButton");
+            manualButton.addEventListener("click", function () {
+                set_manual_mode();
+            });
+        });
+
+        // Go ahead Button
+        function go_ahead_one_step() {
+            const apiUrl = "/go_ahead_one_step";
+            const stepButton = document.getElementById("stepButton");
+            fetch(apiUrl)
+                .then(response => {
+                    response.text()
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const stepButton = document.getElementById("stepButton");
+            stepButton.addEventListener("click", function () {
+                go_ahead_one_step();
+            });
+        });
+
+
+        // Dati del JSON fornito
+        // Inizializza la mappa
+        const map = L.map('map').setView([41.9109, 12.4818], 6); // Imposta la vista sulla posizione di Roma
+        var mapMarkers = [];
+        var vehicleMarkers = [];
+        // Aggiungi un tile layer per visualizzare la mappa (puoi scegliere il provider che preferisci)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        var truckIcon = L.icon({
+            iconUrl: '/static/truck_icon.png',
+            iconSize: [16, 16],
+            iconAnchor: [8, 8]
+        });
+
+        var airplaneIcon = L.icon({
+            iconUrl: '/static/airplane_icon.png',
+            iconSize: [16, 16],
+            iconAnchor: [8, 8]
+        });
+
+        function load() {
+            var data = null;
+
+            let url = "/facilities"
+            fetch(url)
+                // gestisci il successo
+                .then(response => {
+                    return response.json()
+                }
+                )  // converti a json
+                .then(json => {
+                    console.log(json)
+                    removeAllMarkers()
+                    initMap(json)
+                    updateStats(json)
+                }
+                )  // converti a json
+                .catch(err => console.log('Request Failed', err)); // gestisci gli errori
+
+            url = "/vehicles"
+            fetch(url)
+                // gestisci il successo
+                .then(response => {
+                    return response.json()
+                }
+                )  // converti a json
+                .then(json => {
+                    console.log(json)
+                    removeVehicleMarkers()
+                    updateVehiclePos(json)
+                    updateVehicleStats(json)
+                }
+                )  // converti a json
+                .catch(err => console.log('Request Failed', err)); // gestisci gli errori
+        }
+
+        // function loadVehicles() {
+        //     var data = null;
+        //     let url = "http://localhost:5000/vehicles"
+        //     fetch(url)
+        //         // gestisci il successo
+        //         .then(response => {
+        //             return response.json()
+        //         }
+        //         )  // converti a json
+        //         .then(json => {
+        //             console.log(json)
+        //             updateVehicleStats(json)
+        //         }
+        //         )  // converti a json
+        //         .catch(err => console.log('Request Failed', err)); // gestisci gli errori
+        // }
+
+        function removeAllMarkers() {
+            for (var i = 0; i < mapMarkers.length; i++) {
+                map.removeLayer(mapMarkers[i]);
+            }
+        }
+
+        function removeVehicleMarkers() {
+            for (var i = 0; i < vehicleMarkers.length; i++) {
+                map.removeLayer(vehicleMarkers[i]);
+            }
+        }
+
+        function updateVehicleStats(data) {
+            var content = "<div><table id=\"vehicletable\"><tr><th>ID</th><th>Current load</th><th>Num parcels</th><th>Running</th></tr>"
+            data.forEach(vehicle => {
+                if (vehicle.current_load > 0 || vehicle.running) {
+                    content += "<tr><td>" + vehicle.id + "</td><td>" + vehicle.current_load + "</td><td>" + vehicle.num_parcels + "</td><td>" + vehicle.running.toString() + "</td></tr>"
+                }
+            })
+            document.getElementById("vehicle").innerHTML = content + "</table></div>";
+            colorTable()
+        }
+
+        function updateVehiclePos(vehicles) {
+            vehicles.filter(vehicle => vehicle.running)
+                .forEach(vehicle => {
+
+                    var icon = vehicle.vehicle_type == "truck" ? truckIcon : airplaneIcon
+                    var marker = L.marker([vehicle.position[0], vehicle.position[1]], { icon: icon }).addTo(map);
+
+                    marker.bindPopup("");
+
+                    vehicleMarkers.push(marker)
+                });
+
+        }
+
+        function updateStats(data) {
+            var content = "<div><table id=\"table\"><tr><th>Facility</th><th>Parcels in queue</th><th>Parcels Delivered</th><th>Parcels Undeliverable</th><th>Queue</th><th>Vehicles</th></tr>"
+            data.forEach(node => {
+                var queues = "";
+                for (var key of Object.keys(node.parcels_dest_queue)) {
+                    console.log(key + " -> " + node.parcels_dest_queue[key].lenght)
+                    queues += "<li>" + key + " - " + node.parcels_dest_queue[key].length + "</li>"
+                }
+                var vehicles = "";
+                for (var key of Object.keys(node.available_vehicles)) {
+                    console.log(key + " -> " + node.available_vehicles[key].lenght)
+                    vehicles += "<li>" + key + " - " + node.available_vehicles[key].length + "</li>"
+                }
+                parcels_to_be_delivered = '-'
+                if (node.parcels_to_be_delivered != undefined) {
+                    parcels_to_be_delivered = node.parcels_to_be_delivered.length
+                }
+                content += "<tr><td>" + node.id + "</td><td>" + node.parcels_to_be_sorted.length + "</td><td>" + parcels_to_be_delivered + "</td><td>" + node.parcels_undeliverable.length + "</td><td>" + queues + "</td><td>" + vehicles + "</td></tr>"
+            })
+            document.getElementById("stats").innerHTML = content + "</table></div>";
+            colorTable()
+        }
+
+        function colorTable() {
+            var t = document.getElementById('table');
+            if (t) {
+                Array.from(t.rows).forEach((tr, rowIdx) => {
+                    Array.from(tr.cells).forEach((cell, cellIdx) => {
+                        if (cell.innerText == '') {
+                            cell.style.backgroundColor = 'RGBA(85,83,108,0.4)';
+                        } else if (cell.innerText >= 0 && cell.innerText < 1) {
+                            cell.style.backgroundColor = 'green';
+                        } else if (cell.innerText >= 1 && cell.innerText <= 3) {
+                            cell.style.backgroundColor = '#FF7F50';
+                        } else if (cell.innerText > 3 && cell.innerText <= 5) {
+                            cell.style.backgroundColor = '#FF4500';
+                        } else if (cell.innerText > 5 && cell.innerText <= 10) {
+                            cell.style.backgroundColor = '#FF0000';
+                        } else if (cell.innerText > 10 && cell.innerText <= 20) {
+                            cell.style.backgroundColor = '#8B0000';
+                        } else if (cell.innerText > 20 && cell.innerText <= 50) {
+                            cell.style.backgroundColor = '#800000';
+                        } else if (cell.innerText > 50) {
+                            cell.style.backgroundColor = 'black';
+                        }
+                    });
+                });
+            }
+        }
+
+        function initMap(data) {
+            // Aggiungi i marker per i nodi
+            data.forEach(node => {
+                parcels_to_be_delivered = '-'
+                // console.log(node)
+                if (node.parcels_to_be_delivered != undefined) {
+                    parcels_to_be_delivered = node.parcels_to_be_delivered.length
+                }
+                var popupText = node.id + " <br> # of parcels: " + node.parcels_to_be_sorted.length + "<br> number of parcels ready to be delivered: " + parcels_to_be_delivered
+                var marker = L.circleMarker([node.latitude, node.longitude]).addTo(map);
+                marker.bindPopup(popupText);
+
+                mapMarkers.push(marker)
+
+                if (node.parcels_to_be_sorted.length >= 1 && node.parcels_to_be_sorted.length < 3) {
+                    marker.setStyle({ fillColor: 'yellow' });
+                } else if (node.parcels_to_be_sorted.length >= 3) {
+                    marker.setStyle({ fillColor: 'red' });
+                } else {
+                    marker.setStyle({ fillColor: 'green' });
+                }
+            });
+
+        }
+
+        load()
+        setInterval(load, 200);
+
+        // loadVehicles()
+        // setInterval(loadVehicles, 1000);
+
+        function updateClock() {
+            // Fetch the time from the API
+            fetch("/time")
+                .then(response => response.text()) // Assuming the API returns the time as a plain text string
+                .then(timeString => {
+                    document.getElementById("clock").textContent = timeString;
+                })
+                .catch(error => {
+                    console.error("Error fetching time from API:", error);
+                });
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Call the function once to initialize the clock
+        updateClock();
+
+        // Initialize pause button
+        function get_paused() {
+            const apiUrl = "/paused";
+            const pauseButton = document.getElementById("pauseButton");
+            fetch(apiUrl)
+                .then(response => response.text())
+                .then(paused => {
+                    if (paused === "True") {
+                        pauseButton.innerText = "Start";
+                    } else {
+                        pauseButton.innerText = "Pause";
+                    }
+                    pauseButton.disabled = false;
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                    pauseButton.innerText = "Error";
+                    pauseButton.disabled = true;
+                });
+        }
+        get_paused();
+
+        // Pause Button
+        function toggle_paused() {
+            const apiUrl = "/toggle_paused";
+            const pauseButton = document.getElementById("pauseButton");
+            fetch(apiUrl)
+                .then(response => response.text())
+                .then(paused => {
+                    console.log(paused)
+                    if (paused === "True") {
+                        pauseButton.innerText = "Start";
+                    } else {
+                        pauseButton.innerText = "Pause";
+                    }
+                    pauseButton.disabled = false;
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                    pauseButton.innerText = "Error";
+                    pauseButton.disabled = true;
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const pauseButton = document.getElementById("pauseButton");
+            pauseButton.addEventListener("click", function () {
+                pauseButton.disabled = true;
+                if (pauseButton.innerText == "Pause") {
+                    pauseButton.innerText = "Pausing...";
+                } else {
+                    pauseButton.innerText = "Starting...";
+                }
+                toggle_paused();
+            });
+        });
+
+
+        // Initialize velocity
+        function get_velocity() {
+            const apiUrl = "/velocity";
+            const velocityInput = document.getElementById("velocityInput");
+            fetch(apiUrl)
+                .then(response => response.text())
+                .then(velocity => {
+                    velocityInput.value = velocity;
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                    velocityInput.value = "Error";
+                });
+        }
+        get_velocity();
+
+        // Update velocity button
+        function update_velocity(velocity) {
+            const apiUrl = "/velocity";
+            fetch(apiUrl, { method: "POST", body: velocity })
+                .then(response => response.text())
+                .then(ok => {
+                    console.log(ok)
+                    updateVelocityButton.disabled = false;
+                    updateVelocityButton.innerText = "Update velocity";
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                    updateVelocityButton.disabled = false;
+                    updateVelocityButton.innerText = "Update velocity";
+                });
+        }
+
+        // Reset Button
+        function reset() {
+            const apiUrl = "/reset";
+            fetch(apiUrl)
+                .then(response => response.text())
+                .then(ok => {
+                    console.log(ok)
+                    pauseButton.innerText = "Start";
+                })
+                .catch(error => {
+                    console.error("Error during reset:", error);
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const resetButton = document.getElementById("resetButton");
+            resetButton.addEventListener("click", function () {
+                reset();
+            });
+        });
+
+        function update_frame_src() {
+            const apiUrl = "/monitor_url";
+            fetch(apiUrl, { method: "GET" })
+                .then(response => response.text())
+                .then(resp => {
+                    console.log(resp)
+                    document.getElementById("MonitorFrame").src = resp
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            update_frame_src()
+
+            const updateVelocityButton = document.getElementById("updateVelocityButton");
+            const velocityInput = document.getElementById("velocityInput");
+            updateVelocityButton.addEventListener("click", function () {
+                updateVelocityButton.disabled = true;
+                updateVelocityButton.innerText = "Updating...";
+                const velocity = velocityInput.value
+                update_velocity(velocity);
+            });
+        });
+
+        function updateCmdsPerformance() {
+            // Fetch the time from the API
+            fetch("/get_cmds_performance")
+                .then(response => response.json()) // Assuming the API returns the time as a plain text string
+                .then(perfomance => {
+                    document.getElementById("cmdsPerformance").innerText = JSON.stringify(perfomance, null, 4);
+                })
+                .catch(error => {
+                    console.error("Error fetching time from API:", error);
+                });
+        }
+
+        // Update the performance 
+        setInterval(updateCmdsPerformance, 5000);
+
+        // Call the function once to initialize the clock
+        updateCmdsPerformance();
+
+    </script>
+</body>
+
+</html>

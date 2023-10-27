@@ -1,0 +1,227 @@
+[
+  {
+    "node": {
+      "node_id": "Milano_Hub",
+      "node_type": "HUB",
+      "node_company": "PCL",
+      "node_location": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Milano",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 45.4642,
+        "long": 9.19
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "Bari_Hub",
+        "distance": 771
+      },
+      {
+        "node_id": "Palermo_Hub",
+        "distance": 571
+      },
+      {
+        "node_id": "Torino_Branch1",
+        "distance": 100
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432_Milano_Hub",
+        "capacity": 100
+      }
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "Bari_Hub",
+      "node_type": "HUB",
+      "node_company": "PCL",
+      "node_location": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Bari",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 41.1171,
+        "long": 16.8719
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "Milano_Hub",
+        "distance": 771
+      },
+      {
+        "node_id": "Palermo_Hub",
+        "distance": 609
+      },
+      {
+        "node_id": "Foggia_Branch1",
+        "distance": 100
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432_Bari_Hub",
+        "capacity": 100
+      }
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "Palermo_Hub",
+      "node_type": "HUB",
+      "node_company": "PCL",
+      "node_location": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Palermo",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 38.1157,
+        "long": 13.3613
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "Milano_Hub",
+        "distance": 571
+      },
+      {
+        "node_id": "Bari_Hub",
+        "distance": 609
+      },
+      {
+        "node_id": "Siracusa_Branch1",
+        "distance": 100
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432_Palermo_Hub",
+        "capacity": 100
+      }
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "Torino_Branch1",
+      "node_type": "FILIALE",
+      "node_company": "PCL",
+      "node_location": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Torino",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 45.0707,
+        "long": 7.6868
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "Milano_Hub",
+        "distance": 100
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432_Torino_Branch1",
+        "capacity": 100
+      }
+    ],
+    "served_zip_codes": [
+      "00701",
+      "00702",
+      "00703",
+      "00704",
+      "00705"
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "Siracusa_Branch1",
+      "node_type": "FILIALE",
+      "node_company": "PCL",
+      "node_location": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Siracusa",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 37.0755,
+        "long": 15.2866
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "Palermo_Hub",
+        "distance": 100
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432_Siracusa_Branch1",
+        "capacity": 100
+      }
+    ],
+    "served_zip_codes": [
+      "60101",
+      "60102",
+      "60103",
+      "60104",
+      "60105"
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "Foggia_Branch1",
+      "node_type": "FILIALE",
+      "node_company": "PCL",
+      "node_location": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Foggia",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 41.4623,
+        "long": 15.544
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "Bari_Hub",
+        "distance": 100
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432_Foggia_Branch1",
+        "capacity": 100
+      }
+    ],
+    "served_zip_codes": [
+      "00121",
+      "00122",
+      "00123",
+      "00124",
+      "00125"
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  }
+]

@@ -1,0 +1,1290 @@
+{
+  "facilities": [
+    {
+      "id": "Roma_Hub",
+      "latitude": 41.9109,
+      "longitude": 12.4818,
+      "type": "hub",
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Milano_Hub",
+      "latitude": 45.4642,
+      "longitude": 9.19,
+      "type": "hub",
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Bari_Hub",
+      "latitude": 41.1171,
+      "longitude": 16.8719,
+      "type": "hub",
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Venezia_Hub",
+      "latitude": 45.4342,
+      "longitude": 12.3386,
+      "type": "hub",
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Palermo_Hub",
+      "latitude": 38.1157,
+      "longitude": 13.3613,
+      "type": "hub",
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Novara_Branch1",
+      "latitude": 45.4442,
+      "longitude": 8.6215,
+      "type": "branch",
+      "servedZipCodes": [
+        "00601",
+        "00602",
+        "00603",
+        "00604",
+        "00605"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Torino_Branch1",
+      "latitude": 45.0707,
+      "longitude": 7.6868,
+      "type": "branch",
+      "servedZipCodes": [
+        "00701",
+        "00702",
+        "00703",
+        "00704",
+        "00705"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Cremona_Branch1",
+      "latitude": 45.1366,
+      "longitude": 10.0255,
+      "type": "branch",
+      "servedZipCodes": [
+        "00801",
+        "00802",
+        "00803",
+        "00804",
+        "00805"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Brescia_Branch1",
+      "latitude": 45.5416,
+      "longitude": 10.2118,
+      "type": "branch",
+      "servedZipCodes": [
+        "00901",
+        "00902",
+        "00903",
+        "00904",
+        "00905"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Pavia_Branch1",
+      "latitude": 45.1865,
+      "longitude": 9.1569,
+      "type": "branch",
+      "servedZipCodes": [
+        "01101",
+        "01102",
+        "01103",
+        "01104",
+        "01105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Venezia_Branch1",
+      "latitude": 46.0661,
+      "longitude": 11.1198,
+      "type": "branch",
+      "servedZipCodes": [
+        "02101",
+        "02102",
+        "02103",
+        "02104",
+        "02105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Venezia_Branch2",
+      "latitude": 45.6486,
+      "longitude": 13.7768,
+      "type": "branch",
+      "servedZipCodes": [
+        "03101",
+        "03102",
+        "03103",
+        "03104",
+        "03105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Venezia_Branch3",
+      "latitude": 46.4993,
+      "longitude": 11.3569,
+      "type": "branch",
+      "servedZipCodes": [
+        "04101",
+        "04102",
+        "04103",
+        "04104",
+        "04105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Venezia_Branch4",
+      "latitude": 44.8378,
+      "longitude": 11.6202,
+      "type": "branch",
+      "servedZipCodes": [
+        "05101",
+        "05102",
+        "05103",
+        "05104",
+        "05105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Venezia_Branch5",
+      "latitude": 45.5565,
+      "longitude": 11.5475,
+      "type": "branch",
+      "servedZipCodes": [
+        "06101",
+        "06102",
+        "06103",
+        "06104",
+        "06105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Trento_Branch1",
+      "latitude": 46.0662,
+      "longitude": 11.1211,
+      "type": "branch",
+      "servedZipCodes": [
+        "07101",
+        "07102",
+        "07103",
+        "07104",
+        "07105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Trieste_Branch1",
+      "latitude": 45.6505,
+      "longitude": 13.7795,
+      "type": "branch",
+      "servedZipCodes": [
+        "08101",
+        "08102",
+        "08103",
+        "08104",
+        "08105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Bolzano_Branch1",
+      "latitude": 46.4994,
+      "longitude": 11.3568,
+      "type": "branch",
+      "servedZipCodes": [
+        "09101",
+        "09102",
+        "09103",
+        "09104",
+        "09105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Ferrara_Branch1",
+      "latitude": 44.8379,
+      "longitude": 11.62,
+      "type": "branch",
+      "servedZipCodes": [
+        "10101",
+        "10102",
+        "10103",
+        "10104",
+        "10105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Vicenza_Branch1",
+      "latitude": 45.5566,
+      "longitude": 11.5473,
+      "type": "branch",
+      "servedZipCodes": [
+        "20101",
+        "20102",
+        "20103",
+        "20104",
+        "20105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Catania_Branch1",
+      "latitude": 37.5079,
+      "longitude": 15.083,
+      "type": "branch",
+      "servedZipCodes": [
+        "30101",
+        "30102",
+        "30103",
+        "30104",
+        "30105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Trapani_Branch1",
+      "latitude": 37.5035,
+      "longitude": 12.5152,
+      "type": "branch",
+      "servedZipCodes": [
+        "40101",
+        "40102",
+        "40103",
+        "40104",
+        "40105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Messina_Branch1",
+      "latitude": 38.1938,
+      "longitude": 15.5542,
+      "type": "branch",
+      "servedZipCodes": [
+        "50101",
+        "50102",
+        "50103",
+        "50104",
+        "50105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Siracusa_Branch1",
+      "latitude": 37.0755,
+      "longitude": 15.2866,
+      "type": "branch",
+      "servedZipCodes": [
+        "60101",
+        "60102",
+        "60103",
+        "60104",
+        "60105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Agrigento_Branch1",
+      "latitude": 37.3097,
+      "longitude": 13.5846,
+      "type": "branch",
+      "servedZipCodes": [
+        "70101",
+        "70102",
+        "70103",
+        "70104",
+        "70105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Cosenza_Branch1",
+      "latitude": 39.2921,
+      "longitude": 16.2583,
+      "type": "branch",
+      "servedZipCodes": [
+        "80101",
+        "80102",
+        "80103",
+        "80104",
+        "80105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Lecce_Branch1",
+      "latitude": 40.3539,
+      "longitude": 18.1719,
+      "type": "branch",
+      "servedZipCodes": [
+        "90101",
+        "90102",
+        "90103",
+        "90104",
+        "90105"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Potenza_Branch1",
+      "latitude": 40.6394,
+      "longitude": 15.8051,
+      "type": "branch",
+      "servedZipCodes": [
+        "00111",
+        "00112",
+        "00113",
+        "00114",
+        "00115"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Foggia_Branch1",
+      "latitude": 41.4623,
+      "longitude": 15.544,
+      "type": "branch",
+      "servedZipCodes": [
+        "00121",
+        "00122",
+        "00123",
+        "00124",
+        "00125"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Taranto_Branch1",
+      "latitude": 40.4735,
+      "longitude": 17.4528,
+      "type": "branch",
+      "servedZipCodes": [
+        "00131",
+        "00132",
+        "00133",
+        "00134",
+        "00135"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Viterbo_Branch1",
+      "latitude": 42.4174,
+      "longitude": 12.1047,
+      "type": "branch",
+      "servedZipCodes": [
+        "00141",
+        "00142",
+        "00143",
+        "00144",
+        "00145"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Perugia_Branch1",
+      "latitude": 43.1107,
+      "longitude": 12.3908,
+      "type": "branch",
+      "servedZipCodes": [
+        "00151",
+        "00152",
+        "00153",
+        "00154",
+        "00155"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Napoli_Branch1",
+      "latitude": 40.8522,
+      "longitude": 14.2681,
+      "type": "branch",
+      "servedZipCodes": [
+        "00161",
+        "00162",
+        "00163",
+        "00164",
+        "00165"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Pescara_Branch1",
+      "latitude": 42.4642,
+      "longitude": 14.2141,
+      "type": "branch",
+      "servedZipCodes": [
+        "00171",
+        "00172",
+        "00173",
+        "00174",
+        "00175"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    },
+    {
+      "id": "Firenze_Branch1",
+      "latitude": 43.7695,
+      "longitude": 11.2558,
+      "type": "branch",
+      "servedZipCodes": [
+        "00181",
+        "00182",
+        "00183",
+        "00184",
+        "00185"
+      ],
+      "processingTimes": [
+        5,
+        17
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "source": "Roma_Hub",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 572.04,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 358.2,
+      "cutoffTimes": [
+        10,
+        22
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 532.9,
+      "cutoffTimes": [
+        11,
+        23
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Palermo_Hub",
+      "vehicleType": "airplane",
+      "distance": 572.04,
+      "cutoffTimes": [
+        12,
+        0
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Viterbo_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        13,
+        1
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Perugia_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        14,
+        2
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Napoli_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        15,
+        3
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Pescara_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        16,
+        4
+      ]
+    },
+    {
+      "source": "Roma_Hub",
+      "target": "Firenze_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        17,
+        5
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Bari_Hub",
+      "vehicleType": "airplane",
+      "distance": 771.4,
+      "cutoffTimes": [
+        18,
+        6
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 243.5,
+      "cutoffTimes": [
+        19,
+        7
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Palermo_Hub",
+      "vehicleType": "airplane",
+      "distance": 571.86,
+      "cutoffTimes": [
+        20,
+        8
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Novara_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Torino_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Torino_Branch1",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        13,
+        17
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Cremona_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Brescia_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Pavia_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 574.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Palermo_Hub",
+      "vehicleType": "airplane",
+      "distance": 609.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Cosenza_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Lecce_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Potenza_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Foggia_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Taranto_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Palermo_Hub",
+      "vehicleType": "airplane",
+      "distance": 534.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Trento_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Trieste_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Bolzano_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Ferrara_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Vicenza_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Catania_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Trapani_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Messina_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Siracusa_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Agrigento_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 572.04,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 358.2,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 532.9,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Roma_Hub",
+      "vehicleType": "airplane",
+      "distance": 572.04,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Viterbo_Branch1",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Perugia_Branch1",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Napoli_Branch1",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Pescara_Branch1",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Firenze_Branch1",
+      "target": "Roma_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Milano_Hub",
+      "vehicleType": "airplane",
+      "distance": 771.4,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 243.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Milano_Hub",
+      "vehicleType": "airplane",
+      "distance": 571.86,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Novara_Branch1",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Torino_Branch1",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Torino_Branch1",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        13,
+        17
+      ]
+    },
+    {
+      "source": "Cremona_Branch1",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Brescia_Branch1",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Pavia_Branch1",
+      "target": "Milano_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Venezia_Hub",
+      "target": "Bari_Hub",
+      "vehicleType": "airplane",
+      "distance": 574.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 609.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Cosenza_Branch1",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Lecce_Branch1",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Potenza_Branch1",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Foggia_Branch1",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Taranto_Branch1",
+      "target": "Bari_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Venezia_Hub",
+      "vehicleType": "airplane",
+      "distance": 534.5,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Trento_Branch1",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Trieste_Branch1",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Bolzano_Branch1",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Ferrara_Branch1",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Vicenza_Branch1",
+      "target": "Venezia_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Catania_Branch1",
+      "target": "Palermo_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Trapani_Branch1",
+      "target": "Palermo_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Messina_Branch1",
+      "target": "Palermo_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Siracusa_Branch1",
+      "target": "Palermo_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    },
+    {
+      "source": "Agrigento_Branch1",
+      "target": "Palermo_Hub",
+      "vehicleType": "truck",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        21
+      ]
+    }
+  ]
+}

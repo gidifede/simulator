@@ -1,0 +1,132 @@
+[
+  {
+    "source_node_id": "MI1",
+    "destination_node_id": "RM1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "MI1",
+    "destination_node_id": "MI1_Filiale",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "MI1_Filiale",
+    "destination_node_id": "MI1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "RM1",
+    "destination_node_id": "MI1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "RM1",
+    "destination_node_id": "RM1_Filiale",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "RM1",
+    "destination_node_id": "NA1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "RM1_Filiale",
+    "destination_node_id": "RM1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "NA1",
+    "destination_node_id": "RM1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "NA1",
+    "destination_node_id": "NA1_Filiale",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "NA1_Filiale",
+    "destination_node_id": "NA1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "BA1",
+    "destination_node_id": "RM1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "BA1",
+    "destination_node_id": "BA1_Filiale",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  },
+  {
+    "source_node_id": "BA1_Filiale",
+    "destination_node_id": "BA1",
+    "cutoff_time": [
+      "15:30",
+      "16:30",
+      "17:30"
+    ],
+    "timestamp": "2023-09-18T10:31:02.832Z"
+  }
+]

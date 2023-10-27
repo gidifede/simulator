@@ -1,0 +1,6 @@
+FROM python:3.10-slim-buster
+WORKDIR /app
+COPY ./requirements.txt /app
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["celery", "-A", "celeryapp_groups", "worker", "-n",  "groups", "--concurrency=1", "--loglevel=INFO"]

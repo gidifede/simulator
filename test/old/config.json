@@ -1,0 +1,231 @@
+{
+  "facilities": [
+    {
+      "id": "Milano_Hub",
+      "latitude": 45.4642,
+      "longitude": 9.19,
+      "type": "hub",
+      "processingTimes": [
+        8,
+        10,
+        13,
+        16
+      ]
+    },
+    {
+      "id": "Bari_Hub",
+      "latitude": 41.1171,
+      "longitude": 16.8719,
+      "type": "hub",
+      "processingTimes": [
+        8,
+        10,
+        13,
+        16
+      ]
+    },
+    {
+      "id": "Palermo_Hub",
+      "latitude": 38.1157,
+      "longitude": 13.3613,
+      "type": "hub",
+      "processingTimes": [
+        8,
+        10,
+        13,
+        16
+      ]
+    },
+    {
+      "id": "Torino_Branch1",
+      "latitude": 45.0707,
+      "longitude": 7.6868,
+      "type": "branch",
+      "servedZipCodes": [
+        "00701",
+        "00702",
+        "00703",
+        "00704",
+        "00705"
+      ],
+      "processingTimes": [
+        8,
+        10,
+        13,
+        16
+      ]
+    },
+    {
+      "id": "Siracusa_Branch1",
+      "latitude": 37.0755,
+      "longitude": 15.2866,
+      "type": "branch",
+      "servedZipCodes": [
+        "60101",
+        "60102",
+        "60103",
+        "60104",
+        "60105"
+      ],
+      "processingTimes": [
+        8,
+        10,
+        13,
+        16
+      ]
+    },
+    {
+      "id": "Foggia_Branch1",
+      "latitude": 41.4623,
+      "longitude": 15.544,
+      "type": "branch",
+      "servedZipCodes": [
+        "00121",
+        "00122",
+        "00123",
+        "00124",
+        "00125"
+      ],
+      "processingTimes": [
+        8,
+        10,
+        13,
+        16
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "source": "Milano_Hub",
+      "target": "Bari_Hub",
+      "distance": 771.4,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Milano_Hub",
+      "distance": 771.4,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Palermo_Hub",
+      "distance": 571.86,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Milano_Hub",
+      "distance": 571.86,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Milano_Hub",
+      "target": "Torino_Branch1",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Torino_Branch1",
+      "target": "Milano_Hub",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        13,
+        17
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Foggia_Branch1",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Foggia_Branch1",
+      "target": "Bari_Hub",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Siracusa_Branch1",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Siracusa_Branch1",
+      "target": "Palermo_Hub",
+      "distance": 100.0,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Palermo_Hub",
+      "target": "Bari_Hub",
+      "distance": 609.5,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source": "Bari_Hub",
+      "target": "Palermo_Hub",
+      "distance": 609.5,
+      "cutoffTimes": [
+        9,
+        11,
+        14,
+        17
+      ]
+    }
+  ]
+}

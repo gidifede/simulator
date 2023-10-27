@@ -1,0 +1,178 @@
+[
+  {
+    "node": {
+      "node_id": "RM1",
+      "node_type": "HUB",
+      "node_company": "PCL",
+      "address": {
+        "address": "Viale Europa 190",
+        "zipcode": "00144",
+        "city": "Roma",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 41.830,
+        "long": 12.468
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "FI1",
+        "distance": 220
+      },
+      {
+        "node_id": "NA1",
+        "distance": 130
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "RM123AA432",
+        "capacity": 100
+      }
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "FI1",
+      "node_type": "HUB",
+      "node_company": "PCL",
+      "address": {
+        "address": "Viale Dante 33",
+        "zipcode": "12056",
+        "city": "Firenze",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 43.768,
+        "long": 11.258
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "RM1",
+        "distance": 220
+      },
+      {
+        "node_id": "BO1",
+        "distance": 90
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "FI523BB432",
+        "capacity": 150
+      }
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "NA1",
+      "node_type": "HUB",
+      "node_company": "PCL",
+      "address": {
+        "address": "Viale Vesuvio 73",
+        "zipcode": "13017",
+        "city": "Napoli",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 45.678,
+        "long": 90.123
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "RM1",
+        "distance": 130
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "NA998HH365",
+        "capacity": 150
+      }
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "BO1",
+      "node_type": "BRANCH",
+      "node_company": "SDA",
+      "address": {
+        "address": "Via Rossa 31",
+        "zipcode": "000154",
+        "city": "Bologna",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 44.512,
+        "long": 11.346
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "FI1",
+        "distance": 90
+      },
+      {
+        "node_id": "MI1",
+        "distance": 190
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "BO198RR362",
+        "capacity": 150
+      }
+    ],
+    "served_zip_codes": [
+      "00701",
+      "00702",
+      "00703",
+      "00704",
+      "00705"
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  },
+  {
+    "node": {
+      "node_id": "MI1",
+      "node_type": "BRANCH",
+      "node_company": "PCL",
+      "address": {
+        "address": "Via dei soldi",
+        "zipcode": "000998",
+        "city": "Milano",
+        "nation": "Italy"
+      },
+      "coordinates": {
+        "lat": 45.465,
+        "long": 9.206
+      }
+    },
+    "connect_to": [
+      {
+        "node_id": "BO1",
+        "distance": 190
+      }
+    ],
+    "sorting_machines": [
+      {
+        "serial": "MI498TT452",
+        "capacity": 150
+      }
+    ],
+    "served_zip_codes": [
+      "60101",
+      "60102",
+      "60103",
+      "60104",
+      "60105"
+    ],
+    "timestamp": "2023-09-18T12:00:00Z"
+  }
+]
